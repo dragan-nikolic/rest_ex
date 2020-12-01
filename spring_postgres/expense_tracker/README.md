@@ -36,3 +36,17 @@ Remove: `$ docker rm container_id`
     * Spring Boot DevTools
 
 * unzip the project and open it in IntelliJ
+  * Run the app > error unable to connect to the database
+
+* create sql script to initialize db (expensetracker_db.sql)
+
+* execute sql script in docker
+  * Copy script to container's root: `docker cp expensetracker_db.sql postgresdb:/`
+  * Go inside container: `docker exec -it postgresdb bash`
+  * Execute SQL: `psql -U postgres --file expensetracker_db.sql`
+
+* add database info to the application.properties
+
+* run the app again
+  * this time we get 'Whitelabel Error Page', which means db coneection is ok :)
+  
