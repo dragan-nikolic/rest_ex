@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "e988d1d0-a83f-4079-b988-f4f8ce59c175",
+		"name": "Expense Tracker API",
+		"description": "Collection to test Expense Tracker API (https://github.com/dragan-nikolic/rest_ex/blob/main/spring_postgres/expense_tracker/README.md)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Dragan\",\n    \"lastName\": \"Nikolic\",\n    \"email\": \"dn@testmail.com\",\n    \"password\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/users/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

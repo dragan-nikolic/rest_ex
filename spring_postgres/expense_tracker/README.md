@@ -47,6 +47,15 @@ Remove: `$ docker rm container_id`
 
 * add database info to the application.properties
 
-* run the app again
+* run the app again (from IntelliJ run ExpenseTrackerApiApplication)
   * this time we get 'Whitelabel Error Page', which means db coneection is ok :)
   
+## Implementation
+
+* POST example: registerUser
+
+## Tools
+
+### Postman
+
+Use Expense Tracker API.postman_collection.json to test API.
