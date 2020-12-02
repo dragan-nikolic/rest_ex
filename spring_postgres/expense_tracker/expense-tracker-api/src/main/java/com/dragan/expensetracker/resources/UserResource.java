@@ -31,7 +31,8 @@ public class UserResource {
         User user = userService.registerUser(firstName, lastName, email, password);
         Map<String, String> map = new HashMap<>();
         map.put("timestamp", new Date().toString());
-        map.put("message", "registered successfully");
+        map.put("user", user.toString());
+        map.put("message", "User registered successfully.");
         return new ResponseEntity<>(map, HttpStatus.OK);
     }
 }
