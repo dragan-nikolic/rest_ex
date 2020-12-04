@@ -4,7 +4,7 @@ freeCodeCamp.org
 
 ## References
 
-* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/)
+* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/) 48:33
 
 ## Setup
 
@@ -70,4 +70,5 @@ Use Expense Tracker API.postman_collection.json to test API.
 
 #### Execute SQL
 
-`select * from et_users;`
+* Select all users: `select * from et_users;`
+* Delete all users: `delete from et_users;`
