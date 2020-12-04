@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"Dragan\",\n    \"lastName\": \"Nikolic\",\n    \"email\": \"dn@testmail.com\",\n    \"password\": \"test123\"\n}",
+					"raw": "{\n    \"firstName\": \"Pera\",\n    \"lastName\": \"Nikolic\",\n    \"email\": \"pera@testmail.com\",\n    \"password\": \"test123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -29,6 +29,34 @@
 						"api",
 						"users",
 						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"pera@testmail.com\",\n    \"password\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/users/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
 					]
 				}
 			},

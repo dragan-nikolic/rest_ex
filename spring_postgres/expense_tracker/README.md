@@ -14,7 +14,7 @@ freeCodeCamp.org
 * Docker
 * PostgreSQL
 
-### PostgreSQL
+### PostgreSQL setup
 
 Use docker [image](https://hub.docker.com/_/postgres).
 
@@ -59,3 +59,15 @@ Remove: `$ docker rm container_id`
 ### Postman
 
 Use Expense Tracker API.postman_collection.json to test API.
+
+### PostgreSQL commands
+
+* Go into container and run open db command line as posgtres user: `docker exec -it postgresdb psql -U postgres`
+
+#### Connect to expensetrackerdb
+
+`\connect expensetrackerdb;`
+
+#### Execute SQL
+
+`select * from et_users;`
