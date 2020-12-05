@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"pera@testmail.com\",\n    \"password\": \"test123\"\n}",
+					"raw": "{\n    \"email\": \"free@testmail.com\",\n    \"password\": \"test123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -57,6 +57,30 @@
 						"api",
 						"users",
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Catgories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/categories",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"categories"
 					]
 				}
 			},

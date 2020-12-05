@@ -54,7 +54,7 @@ public class UserResource {
                 .claim("email", user.getEmail())
                 .claim("firstName", user.getFirstName())
                 .claim("lastName", user.getLastName())
-                .signWith(SignatureAlgorithm.HS256, TextCodec.BASE64.decode(Constants.API_SECRET_KEY))
+                .signWith(SignatureAlgorithm.HS256, Constants.API_SECRET_KEY)
                 .compact();
 
         Map<String, String> map = new HashMap<>();
