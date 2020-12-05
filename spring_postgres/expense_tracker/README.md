@@ -4,7 +4,7 @@ freeCodeCamp.org
 
 ## References
 
-* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/) 48:33
+* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/) 1:02:44
 
 ## Prerequisites
 
