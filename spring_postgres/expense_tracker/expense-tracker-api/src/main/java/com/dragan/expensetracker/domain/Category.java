@@ -54,4 +54,15 @@ public class Category {
     public void setTotalExpense(Double totalExpense) {
         this.totalExpense = totalExpense;
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "categoryId=" + categoryId +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", totalExpense=" + totalExpense +
+                '}';
+    }
 }
