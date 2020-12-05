@@ -6,13 +6,32 @@ freeCodeCamp.org
 
 * [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/) 48:33
 
-## Setup
+## Prerequisites
 
 * Java JDK 8
-* IntelliJ IDE
-* Postman
 * Docker
 * PostgreSQL
+
+## Run the app
+
+### Run postgres DB
+
+* Run PostgreSQL in docker as explained in 'PostgreSQL setup'
+* execute sql script in docker
+  * Copy script to container's root: `docker cp expensetracker_db.sql postgresdb:/`
+  * Go inside container: `docker exec -it postgresdb bash`
+  * Execute SQL: `psql -U postgres --file expensetracker_db.sql`
+
+### Run app from command line
+
+* mvn clean install
+* java -jar target/expense-tracker-api-{version}.jar
+
+### Run from IntelliJ
+
+* run ExpenseTrackerApiApplication
+
+## Setup
 
 ### PostgreSQL setup
 
@@ -28,7 +47,7 @@ Remove: `$ docker rm container_id`
   * Project: Maven
   * Language: Java
   * Packaging: Jar
-  * Java: 11
+  * Java: 8
   * Dependencies
     * Spring Web
     * JDBC API
@@ -40,11 +59,6 @@ Remove: `$ docker rm container_id`
 
 * create sql script to initialize db (expensetracker_db.sql)
 
-* execute sql script in docker
-  * Copy script to container's root: `docker cp expensetracker_db.sql postgresdb:/`
-  * Go inside container: `docker exec -it postgresdb bash`
-  * Execute SQL: `psql -U postgres --file expensetracker_db.sql`
-
 * add database info to the application.properties
 
 * run the app again (from IntelliJ run ExpenseTrackerApiApplication)
@@ -55,6 +69,10 @@ Remove: `$ docker rm container_id`
 * POST example: registerUser
 
 ## Tools
+
+### IntelliJ
+
+Set project SDK to 1.8 and language level to 8.
 
 ### Postman
 
@@ -72,3 +90,11 @@ Use Expense Tracker API.postman_collection.json to test API.
 
 * Select all users: `select * from et_users;`
 * Delete all users: `delete from et_users;`
+
+## Issues
+
+### JWT signWith generates DatatypeConverter exception
+
+Solution: Use java 8 instead of Java 11.
+
+[Stackoverflow question](https://stackoverflow.com/questions/62660131/jwt-token-datatypeconverter-parsebase64binary-nullpointerexception-on-signwith)
