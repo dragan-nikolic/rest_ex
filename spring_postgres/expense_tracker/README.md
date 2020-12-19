@@ -4,11 +4,13 @@ freeCodeCamp.org
 
 ## References
 
-* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/) 1:19:55
+* [Spring Boot Java Tutorial - REST API using PosgreSQL and JWT](https://www.freecodecamp.org/news/use-spring-boot-and-java-to-create-a-rest-api-tutorial/)
+* [Github expense-tracker-api](https://github.com/pairlearning/expense-tracker-api)
 
 ## Prerequisites
 
 * Java JDK 8
+* Spring Boot
 * Docker
 * PostgreSQL
 
